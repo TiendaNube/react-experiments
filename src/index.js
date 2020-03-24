@@ -1,3 +1,7 @@
 import Experiment from './Experiment'
+import { useEmitter } from './hook'
 
-export default Experiment
+export {
+  Experiment,
+  useEmitter
+}
