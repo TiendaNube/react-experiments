@@ -1,0 +1,23 @@
+{
+  "name": "react-experiments",
+  "version": "1.0.0",
+  "description": "Lib to make experiments with components react",
+  "main": "dist/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "rollup --config"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.5.5",
+    "@babel/plugin-proposal-optional-chaining": "^7.9.0",
+    "@babel/preset-env": "^7.5.5",
+    "body-parser": "^1.19.0",
+    "rollup": "^1.18.0"
+  },
+  "author": "TiendaNube",
+  "license": "ISC",
+  "dependencies": {
+    "prop-types": "^15.7.2",
+    "react": "^16.13.1"
+  }
+}
