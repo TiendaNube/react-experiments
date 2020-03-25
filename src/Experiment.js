@@ -11,17 +11,25 @@ const Experiment = ({
   name,
   children
 }) => {
-  const context = useContext(ContextExperiment)
-  const experiments = context.experiments
+  
+  return (
+    <ContextExperiment.Consumer>
+      {context => {
+        // const context = useContext(ContextExperiment)
+        const experiments = context.experiments
+      
+        // Verify if Experiment exist
+        const experimentActive = verifyExperimentExist(experiments, name)
+        if (!experimentActive) return false;
+      
+        // Verify if test is active
+        if (variant !== experiments[experimentActive]) return false;
 
-  // Verify if Experiment exist
-  const experimentActive = verifyExperimentExist(experiments, name)
-  if (!experimentActive) return false;
-
-  // Verify if test is active
-  if (variant !== experiments[experimentActive]) return false;
-
-  return children
+        return children
+      }
+      }
+    </ContextExperiment.Consumer>
+  )
 }
 
 export default Experiment;
