@@ -18,15 +18,6 @@ export default {
 		resolve(),
 		babel({
 			exclude: 'node_modules/**',
-		}),
-		commonjs({
-			namedExports: {
-				'node_modules/react-js/index.js': ['isValidElementType'],
-			},
-			include: [
-				/node_modules\/prop-types/,
-				/node_modules\/react-is/,
-			],
 		})
 	]
 }
