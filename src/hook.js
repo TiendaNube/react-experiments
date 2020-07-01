@@ -15,15 +15,12 @@ export const useExperimentContext = () => {
 
 export const useEmitter = (nameExperiment, variablesToTest) => {
   const ctx = useExperimentContext()
-  console.info(ContextExperiment)
   const execute = useCallback(() => {
     const { experiments, method } = ctx
 
-    console.log('nameExperiment', nameExperiment)
-    console.log('experiments[nameExperiment]', experiments[nameExperiment])
-    console.log('variablesToTest', variablesToTest)
+    if (!experiments[nameExperiment]) return false
     return method(nameExperiment, experiments[nameExperiment], variablesToTest);
-  }, [])
+  }, [variablesToTest])
 
   return { execute }
 }

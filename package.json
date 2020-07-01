@@ -1,6 +1,6 @@
 {
   "name": "@tiendanube/react-experiments",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "Lib to make experiments with components react",
   "main": "dist/index.js",
   "scripts": {
