@@ -17,8 +17,7 @@ export const useEmitter = (nameExperiment, variablesToTest) => {
   const ctx = useExperimentContext()
   const execute = useCallback(() => {
     const { experiments, method } = ctx
-
-    if (!experiments[nameExperiment]) return false
+    if (!experiments || !experiments[nameExperiment]) return false
     return method(nameExperiment, experiments[nameExperiment], variablesToTest);
   }, [variablesToTest])
 
