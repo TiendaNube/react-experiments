@@ -1,36 +1,44 @@
 {
   "name": "@tiendanube/react-experiments",
-  "version": "1.0.9",
+  "version": "1.1.0",
   "description": "Lib to make experiments with components react",
   "main": "dist/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "prepare": "install-peers && yarn test",
+    "test": "jest  --rootDir . --reporters=jest-junit --reporters=default --coverage",
     "build": "rollup --config"
   },
   "devDependencies": {
-    "@babel/core": "^7.5.5",
-    "@babel/plugin-proposal-optional-chaining": "^7.9.0",
-    "@babel/plugin-transform-modules-commonjs": "^7.9.0",
-    "@babel/preset-env": "^7.5.5",
+    "@babel/core": "^7.11.6",
+    "@babel/plugin-proposal-optional-chaining": "^7.11.0",
+    "@babel/plugin-transform-modules-commonjs": "^7.10.4",
+    "@babel/preset-env": "^7.11.5",
     "@babel/preset-es2017": "^7.0.0-beta.53",
-    "@babel/preset-react": "^7.9.4",
+    "@babel/preset-react": "^7.10.4",
+    "@testing-library/jest-dom": "^5.11.4",
+    "@testing-library/react": "^11.0.4",
     "babel-plugin-external-helpers": "^6.22.0",
     "babel-preset-es2015-rollup": "^3.0.0",
     "babel-preset-latest": "^6.24.1",
     "body-parser": "^1.19.0",
-    "rollup": "^2.2.0",
+    "install-peers-cli": "^2.2.0",
+    "jest": "^26.4.2",
+    "jest-junit": "^11.1.0",
+    "prop-types": "^15.7.2",
+    "react-proptypes": "^1.0.0",
+    "rollup": "^2.27.1",
     "rollup-plugin-babel": "^4.4.0",
-    "rollup-plugin-commonjs": "^10.1.0",
-    "rollup-plugin-node-resolve": "^5.2.0"
+    "rollup-plugin-node-resolve": "^5.2.0",
+    "styled-jsx": "^3.3.0"
   },
   "author": "TiendaNube",
   "license": "ISC",
-  "dependencies": {
-    "prop-types": "^15.7.2",
+  "peerDependencies": {
     "react": "^16.13.1",
-    "react-dom": "^16.13.1",
-    "react-proptypes": "^1.0.0",
-    "styled-jsx": "^3.2.5"
+    "react-dom": "^16.13.1"
+  },
+  "resolutions": {
+    "lodash": "4.17.19"
   },
   "files": [
     "dist"

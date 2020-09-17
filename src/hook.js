@@ -1,4 +1,4 @@
-import React, { useEffect, useContext, useCallback } from 'react'
+import { useContext, useCallback } from 'react'
 import ContextExperiment from './ContextExperiment'
 
 export const useExperimentContext = () => {
