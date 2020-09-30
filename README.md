@@ -12,7 +12,7 @@ yarn add @tiendanube/react-experiments
 A primeira coisa a fazer é configurar o Context passando os parametros de controle de exibicão dos experimentos.
 Deve-se importar o ProviderExperiment, na raiz englobando seu projeto.
 
-##### experimentsParams
+##### experiments
 Essa prop recebe um objeto com a segunte chave e valor:
 {
   name_do_experiento: 'variavel_ativa'
